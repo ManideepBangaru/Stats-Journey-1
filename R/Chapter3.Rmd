@@ -79,6 +79,7 @@ range_(vec)
 ```
 \
 $\sf \Large Variance\ of\ a\ vector$\
+
 $\Large \sigma^2 \small =\Large \frac{\sum_{i=1}^{n} (x_i-\bar X)^2}{n}$
 ```{r,echo=T}
 variance_ <- function(vcetor){
@@ -107,6 +108,7 @@ stddev_(vec)
 \
 $\sf \Large Coefficient\ of\ Variation$
 \
+\
 It measures the scatter in the data with respect to the mean
 \
 \
@@ -123,7 +125,7 @@ CoeffVar_(vec)
 $\sf \Large Z-Score$
 \
 \
-$\Large(\frac{x-\mu}{\sigma})$
+$\Large Z = \Large(\frac{x-\mu}{\sigma})$
 \
 
 * a Z score of 0 indicates that the value is same as the mean
@@ -155,4 +157,61 @@ $\Large Kurtosis$
 * A distribution that has a sharper-rising center peak than the peak of a normal distribution has positive kurtosis, a kurtosis value that is greater than zero, and is called **lepokurtic** 
 * A distribution that has a slower-rising (flatter) center peak than the peak of a normal distribution has negative kurtosis, a kurtosis value that is less than zero, and is called **platykurtic**
 * A **lepokurtic distribution** has a **higher concentration** of values near the mean of the distribution compared to a normal distribution, while a **platykurtic distribution** has a **lower concentration** compared to a normal distribution
+\
+\
 
+$\Large Quartiles$\
+\
+
+$\normalsize \sf Quartiles\ split\ the\ data\ into\ 4\ equal\ parts$\
+
+$\normalsize Q1 = \frac {n+1}{4} \ \ \ \ \ \ \ \ Q2 = 2(\frac {n+1}{4})$
+\
+$\normalsize Q3 = 3(\frac {n+1}{4}) \ \ \ \ Q4 = 4(\frac {n+1}{4})$
+\
+\
+
+$\Large Percentile$
+\
+
+$\normalsize \sf \text{Percentile divides the data into 100 equal parts}$
+\
+\
+
+$\Large \sf \text{The Interquartile Range (IQR)}$
+\
+
+$\sf \normalsize \text{The interquartile range is the difference between third quartile }\textbf{(Q3) }\text{and first quartile }\textbf{(Q1)}$
+\
+
+$\sf \ \ \ \ \ \ \ \ \ \ \ \textbf{IQR} = \textbf{Q3 - Q1}$
+\
+\
+
+$\Large \sf \text{The Empirical rule}$
+\
+
+$\sf \normalsize \text{The Empirical rule states that :}$\
+
+$\ \ \ \ \ \sf \normalsize \text{In a Normal distribution,}$
+
+* Approximately, 68% of the values are within $\bf{\pm1\sigma}$
+* Approximately, 95% of the values are within $\bf{\pm2\sigma}$
+* Approximately, 99.7% of the values are within $\bf{\pm3\sigma}$
+\
+\
+
+$\sf \Large \text{Chebyshev's theorem}$
+\
+
+$\sf \normalsize \text{For heavily skewed datasets that do not appear to be normally distributed, you should use chebyshev's theorem:}$
+\
+
+$\sf \normalsize \text{Regardless of the shape, the percentage of values that are found within distances of k standard deviations from the mean must be at least}$
+\
+
+$\Large (1-\frac{1}{k^2}) * 100$
+\
+\
+
+$\sf \LARGE \text{The Covariance and the Coefficient of Correlation}$
