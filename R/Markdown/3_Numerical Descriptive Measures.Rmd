@@ -16,7 +16,7 @@ $\Large \sf Defining \ a \ Vector$
 vec <- c(20,34,56,23,45,22,60,23,56,78,23,45)
 ```
 \
-$Llarge \sf Mean \ of \ the \ vector$\
+$\Large \sf Mean \ of \ the \ vector$\
 
 $\frac{\Large\sum_{\Large i=1}^{\Large n}{\Large x_i}}{\Large n}$
 ```{r,echo=TRUE}
