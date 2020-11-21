@@ -215,3 +215,58 @@ $\Large (1-\frac{1}{k^2}) * 100$
 \
 
 $\sf \LARGE \text{The Covariance and the Coefficient of Correlation}$
+
+$\large \sf \text{The Covariance}$
+
+$\sf \normalsize \text{It measures the strength of a linear relationship between two numerical variables}$
+
+$Sample,\large \sf \ cov(X,Y) = \frac{\sum_{i=1}^{n}(X_i-\bar X)(Y_i-\bar Y)}{n-1}$
+
+$Population,\large \sf \ cov(X,Y) = \frac{\sum_{i=1}^{n}(X_i-\bar X)(Y_i-\bar Y)}{n}$
+```{r,echo=T}
+vec1 <- c(23,45,34,23,34,56,78,65,45,34)
+vec2 <- c(65,54,34,45,23,45,67,88,96,33)
+```
+```{r,echo=T}
+cov_ <- function(vcetor_x,vcetor_y,sample){
+  numerator <- 0
+  for (i in 1:length(vcetor_x)){
+    numerator <- numerator + (vcetor_x[i]-mean(vcetor_x))*(vcetor_y[i]-mean(vcetor_y))
+  }
+  if (sample==T){
+    return (numerator/(length(vcetor_x)-1)) 
+  }else if (sample==F){
+    return (numerator/length(vcetor_x))
+  }else{
+    return ('Check your parameters !!!')
+  }
+}
+```
+```{r,echo=T}
+cov_(vec1,vec2,T) # sample Variance
+cov_(vec1,vec2,F) # Population Variance
+```
+\
+
+$\sf \large \text{The Coefficient of Correlation}$
+
+$\sf \text{It measures the relative strength of a linear relationship between two numerical variables}$
+
+* Values ranges between -1 to +1
+* -1, perfect negative correlation
+* +1, perfect positive correlation
+
+$\large sample\ correlation,\ \ \bf r = \frac {Cov(X,Y)}{S_XS_Y}$
+
+```{r,echo=T}
+vec1 <- c(23,45,34,23,34,56,78,65,45,34)
+vec2 <- c(65,54,34,45,23,45,67,88,96,33)
+```
+```{r,echo=T}
+corr_ <- function(vcetor_x,vcetor_y){
+  return(cov_(vcetor_x,vcetor_y,F)/(stddev_(vcetor_x)*stddev_(vcetor_y)))
+}
+```
+```{r,echo=T}
+corr_(vec1,vec2)
+```

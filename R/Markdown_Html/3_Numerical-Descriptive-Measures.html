@@ -582,6 +582,46 @@ It measures the scatter in the data with respect to the mean<br />
 <br />
 </p>
 <p><span class="math inline">\(\sf \LARGE \text{The Covariance and the Coefficient of Correlation}\)</span></p>
+<p><span class="math inline">\(\large \sf \text{The Covariance}\)</span></p>
+<p><span class="math inline">\(\sf \normalsize \text{It measures the strength of a linear relationship between two numerical variables}\)</span></p>
+<p><span class="math inline">\(Sample,\large \sf \ cov(X,Y) = \frac{\sum_{i=1}^{n}(X_i-\bar X)(Y_i-\bar Y)}{n-1}\)</span></p>
+<p><span class="math inline">\(Population,\large \sf \ cov(X,Y) = \frac{\sum_{i=1}^{n}(X_i-\bar X)(Y_i-\bar Y)}{n}\)</span></p>
+<pre class="r"><code>vec1 &lt;- c(23,45,34,23,34,56,78,65,45,34)
+vec2 &lt;- c(65,54,34,45,23,45,67,88,96,33)</code></pre>
+<pre class="r"><code>cov_ &lt;- function(vcetor_x,vcetor_y,sample){
+  numerator &lt;- 0
+  for (i in 1:length(vcetor_x)){
+    numerator &lt;- numerator + (vcetor_x[i]-mean(vcetor_x))*(vcetor_y[i]-mean(vcetor_y))
+  }
+  if (sample==T){
+    return (numerator/(length(vcetor_x)-1)) 
+  }else if (sample==F){
+    return (numerator/length(vcetor_x))
+  }else{
+    return (&#39;Check your parameters !!!&#39;)
+  }
+}</code></pre>
+<pre class="r"><code>cov_(vec1,vec2,T) # sample Variance</code></pre>
+<pre><code>## [1] 196.7778</code></pre>
+<pre class="r"><code>cov_(vec1,vec2,F) # Population Variance</code></pre>
+<pre><code>## [1] 177.1</code></pre>
+<p><br />
+</p>
+<p><span class="math inline">\(\sf \large \text{The Coefficient of Correlation}\)</span></p>
+<p><span class="math inline">\(\sf \text{It measures the relative strength of a linear relationship between two numerical variables}\)</span></p>
+<ul>
+<li>Values ranges between -1 to +1</li>
+<li>-1, perfect negative correlation</li>
+<li>+1, perfect positive correlation</li>
+</ul>
+<p><span class="math inline">\(\large sample\ correlation,\ \ \bf r = \frac {Cov(X,Y)}{S_XS_Y}\)</span></p>
+<pre class="r"><code>vec1 &lt;- c(23,45,34,23,34,56,78,65,45,34)
+vec2 &lt;- c(65,54,34,45,23,45,67,88,96,33)</code></pre>
+<pre class="r"><code>corr_ &lt;- function(vcetor_x,vcetor_y){
+  return(cov_(vcetor_x,vcetor_y,F)/(stddev_(vcetor_x)*stddev_(vcetor_y)))
+}</code></pre>
+<pre class="r"><code>corr_(vec1,vec2)</code></pre>
+<pre><code>## [1] 0.4569768</code></pre>
 
 
 
