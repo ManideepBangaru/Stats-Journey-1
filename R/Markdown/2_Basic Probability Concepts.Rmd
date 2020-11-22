@@ -77,4 +77,16 @@ Getting two heads when you toss a coin twice is an example of a joint event beca
 \
 
 ##### Complement
-The complement of event **A** is represented by $\bf A^\prime$
+The complement of event **A** is represented by $\bf A^\prime$\
+The complement of head is a tail in a coin toss as it is the only event that is not a head
+\
+\
+
+##### Sample Space
+The collection of all possible events is called the **sample space**\
+
+* The sample space for tossing a coin is heads and tails\
+* The sample space for rolling a die is 1,2,3,4,5,6
+\
+\
+
