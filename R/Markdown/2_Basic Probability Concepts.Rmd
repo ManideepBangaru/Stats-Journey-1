@@ -1,0 +1,80 @@
+---
+title: "Basic Probability Concepts"
+author: "Manideep Bangaru"
+date: "22/11/2020"
+output: html_document
+---
+\
+
+#### Introduction
+
+* The priciples of probability help bridge the worlds of descriptive statistics and inferential statistics
+* Probability is the numerical value representing the chance, likelihood, or possibility that a particular event will occur
+* An event that has no chance of occurring has a probability of 0
+* An event that is sure to occur has a probability of 1
+
+There are three types of probability:\
+
+* A priori\
+* Empirical\
+* Subjective\
+\
+
+#### Probability of Occurence
+
+$\sf \text{Probability of Occurence} = \large \frac{X}{T}$
+
+$\sf \text{Where, X = number of ways in which the event occures}$
+
+$\sf \ \ \ \ \ \ \ \ \ \ \ \ \ \text{T = total number of possible outcomes}$
+
+In a _**priori probability**_,the probability of an occurrence is based on priori knowledge of the process involved. For example, number of ways the event occurs and the total number of possible outcomes are known from the composition of the deck of cards or the faces of the die.
+
+In the _**empirical probability**_ approach, the probabilities are based on observed data, not on priori knowledge process. For example, Surverys are often used to generate empirical probabilities.
+
+_**subjective probability**_ differs from the other two approaches because, this type of probability differs from person to person, hence the name **Subjective**. This probability is usually based on individuals's past experience, personal opinion, and analysis of a particular situation. Subjective probability is especially useful in making decisions in situations in which you cannot use _**a priori**_ probability or _**empirical probability**_.
+\
+\
+
+#### Experiment
+It refers to an activity or measurement that results in an outcome\
+_Example_: Tossing a single coin for 50 times
+\
+\
+
+#### Event
+Each  possible outcome of a variable is reffered to as an event
+\
+\
+
+#### Equally likely Events
+In a sample space containing at least two events, the chance of the occurence of each of the event is same\
+_Example_: In a coss tossing experiment, having a head or tail is equal to 1/2 of each
+\
+\
+
+#### Mutually Exclusive events
+At a time if there is only one outcome,then the event is said to be mutually exclusive\
+_Example_: Coin tossing experiment, only one outcome at a time. heads or tails
+\
+\
+
+#### Outcome
+Result of a random experiment is called an outcome\
+_Example_: In coin tossing experiment, the two outcomes are head and tail
+\
+\
+
+#### Events and Sample spaces
+When you toss a coin, possible outcomes are either head or tail. Each of these are called as a simple event.
+\
+\
+
+##### Joint event 
+A joint event has two or more characteristics\
+Getting two heads when you toss a coin twice is an example of a joint event because it consists of heads on the first toss and heads on the second toss
+\
+\
+
+##### Complement
+The complement of event **A** is represented by $\bf A^\prime$
