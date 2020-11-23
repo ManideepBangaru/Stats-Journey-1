@@ -22,9 +22,9 @@ There are three types of probability:\
 
 #### Probability of Occurence
 
-$\sf \text{Probability of Occurence} = \large \frac{X}{T}$
+$\sf \text{Probability of Occurrence} = \large \frac{X}{T}$
 
-$\sf \text{Where, X = number of ways in which the event occures}$
+$\sf \text{Where, X = number of ways in which the event occurs}$
 
 $\sf \ \ \ \ \ \ \ \ \ \ \ \ \ \text{T = total number of possible outcomes}$
 
@@ -90,3 +90,78 @@ The collection of all possible events is called the **sample space**\
 \
 \
 
+#### Simple Probability
+It refers to the probability of occurrence of a simple event,**P(A)**\
+\
+$\text{Probability of Occurrence} = \frac{\large \text{Number of ways in which the event occurs}}{\large \text{Total number of events}}$\
+
+* $0 \le P(A) \le 1$\
+* $P(A) + P(A^\prime) = 1$
+\
+\
+
+#### Joint Probability
+Whereas simple probability refers to the probability of occurrence of simple events, joint probability refers to the probability of an occurrence involving two or more events
+An example, joint probability is the probability that you will get heads on the first toss of a coin and heads on the second toss of a coin
+\
+\
+
+#### Marginal Probability
+The Marginal probability of an event consists of a set of joint probabilities.\
+For example, if B consists of two events $\bf B_1$ and $\bf B_2$, then P(A), the probility of event A, consists of the joint probability of event A occurring with event $\bf B_1$ and event $\bf B_2$\
+
+Marginal Probability P(A) = P(A and $B_1$) + P(A and $B_2$) + .... + P(A and $B_k$)
+\
+$\text{Where }B_1,B_2,....,B_k \text{ are k mutually exclusive and collectively exhaustive events}$
+\
+\
+
+#### General Additional Rule
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ P(A or B) = P(A) + P(B) - P(A and B)
+\
+\
+
+#### Conditional Probability
+Conditional probability refers to the occurrence of event A, given information about the occurrence of another event B
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $P(A|B) = \large \frac {P(A\cap B)}{P(B)}$\
+\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $P(B|A) = \large \frac {P(A\cap B)}{P(A)}$
+\
+\
+
+#### Independence
+Two events, A and B are said to be independent only if\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ P(A|B) = P(A)\
+where,\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ P(A|B) = Conditional probability of A and B\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ P(A) \ \ \ = Marginal probability of A
+\
+\
+
+#### General Multiplication Rule
+The probability of A and B is equal to the probability of A given B times the probability of B
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $P(A\cap B) = P(A|B) * P(B)$
+\
+
+Multiplication rule for independent events is derived by substituting P(A) for P(A|B) in the above equation\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $P(A\cap B) = P(A) * P(B)$
+\
+
+If this rule holds for two events, A and B, then A and B are independent.\
+
+Therefore, there are two ways to determine independence :\ 
+
+* Events A and B are independent if, and only if, P(A|B) = P(A)\
+* Events A and B are independent if, and only if, $P(A\cap B) = P(A) * P(B)$
+\
+\
+
+#### Marginal probability using General Multiplication Rule
+\ \ \ \ \ \ \ \ P(A) = P(A|$B_1$) * P($B_1$) + P(A|$B_2$) * P($B_2$) + ..... + P(A|$B_k$) * P($B_k$)
+\
+\
+
+#### Bayesian Theorem
+\ \ \ \ \ \ \ \ P($A_i$|B) = $\large \frac{P(A_i)*P(B|A_i)}{\large \sum_{\large i=1}^{\large n} P(A_i)*P(B|A_i)} \ ,\normalsize i = 1,2,3,....,n$

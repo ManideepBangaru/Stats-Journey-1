@@ -441,8 +441,8 @@ summary {
 </div>
 <div id="probability-of-occurence" class="section level4">
 <h4>Probability of Occurence</h4>
-<p><span class="math inline">\(\sf \text{Probability of Occurence} = \large \frac{X}{T}\)</span></p>
-<p><span class="math inline">\(\sf \text{Where, X = number of ways in which the event occures}\)</span></p>
+<p><span class="math inline">\(\sf \text{Probability of Occurrence} = \large \frac{X}{T}\)</span></p>
+<p><span class="math inline">\(\sf \text{Where, X = number of ways in which the event occurs}\)</span></p>
 <p><span class="math inline">\(\sf \ \ \ \ \ \ \ \ \ \ \ \ \ \text{T = total number of possible outcomes}\)</span></p>
 <p>In a <em><strong>priori probability</strong></em>,the probability of an occurrence is based on priori knowledge of the process involved. For example, number of ways the event occurs and the total number of possible outcomes are known from the composition of the deck of cards or the faces of the die.</p>
 <p>In the <em><strong>empirical probability</strong></em> approach, the probabilities are based on observed data, not on priori knowledge process. For example, Surverys are often used to generate empirical probabilities.</p>
@@ -515,6 +515,90 @@ The complement of head is a tail in a coin toss as it is the only event that is 
 </li>
 </ul>
 </div>
+</div>
+<div id="simple-probability" class="section level4">
+<h4>Simple Probability</h4>
+<p>It refers to the probability of occurrence of a simple event,<strong>P(A)</strong><br />
+<br />
+<span class="math inline">\(\text{Probability of Occurrence} = \frac{\large \text{Number of ways in which the event occurs}}{\large \text{Total number of events}}\)</span><br />
+</p>
+<ul>
+<li><span class="math inline">\(0 \le P(A) \le 1\)</span><br />
+</li>
+<li><span class="math inline">\(P(A) + P(A^\prime) = 1\)</span><br />
+<br />
+</li>
+</ul>
+</div>
+<div id="joint-probability" class="section level4">
+<h4>Joint Probability</h4>
+<p>Whereas simple probability refers to the probability of occurrence of simple events, joint probability refers to the probability of an occurrence involving two or more events An example, joint probability is the probability that you will get heads on the first toss of a coin and heads on the second toss of a coin<br />
+<br />
+</p>
+</div>
+<div id="marginal-probability" class="section level4">
+<h4>Marginal Probability</h4>
+<p>The Marginal probability of an event consists of a set of joint probabilities.<br />
+For example, if B consists of two events <span class="math inline">\(\bf B_1\)</span> and <span class="math inline">\(\bf B_2\)</span>, then P(A), the probility of event A, consists of the joint probability of event A occurring with event <span class="math inline">\(\bf B_1\)</span> and event <span class="math inline">\(\bf B_2\)</span><br />
+</p>
+<p>Marginal Probability P(A) = P(A and <span class="math inline">\(B_1\)</span>) + P(A and <span class="math inline">\(B_2\)</span>) + …. + P(A and <span class="math inline">\(B_k\)</span>)<br />
+<span class="math inline">\(\text{Where }B_1,B_2,....,B_k \text{ are k mutually exclusive and collectively exhaustive events}\)</span><br />
+<br />
+</p>
+</div>
+<div id="general-additional-rule" class="section level4">
+<h4>General Additional Rule</h4>
+<p>                P(A or B) = P(A) + P(B) - P(A and B)<br />
+<br />
+</p>
+</div>
+<div id="conditional-probability" class="section level4">
+<h4>Conditional Probability</h4>
+<p>Conditional probability refers to the occurrence of event A, given information about the occurrence of another event B</p>
+<p>                <span class="math inline">\(P(A|B) = \large \frac {P(A\cap B)}{P(B)}\)</span><br />
+<br />
+                <span class="math inline">\(P(B|A) = \large \frac {P(A\cap B)}{P(A)}\)</span><br />
+<br />
+</p>
+</div>
+<div id="independence" class="section level4">
+<h4>Independence</h4>
+<p>Two events, A and B are said to be independent only if<br />
+                P(A|B) = P(A)<br />
+where,<br />
+                P(A|B) = Conditional probability of A and B<br />
+                P(A)    = Marginal probability of A<br />
+<br />
+</p>
+</div>
+<div id="general-multiplication-rule" class="section level4">
+<h4>General Multiplication Rule</h4>
+<p>The probability of A and B is equal to the probability of A given B times the probability of B</p>
+<p>                <span class="math inline">\(P(A\cap B) = P(A|B) * P(B)\)</span><br />
+</p>
+<p>Multiplication rule for independent events is derived by substituting P(A) for P(A|B) in the above equation<br />
+                <span class="math inline">\(P(A\cap B) = P(A) * P(B)\)</span><br />
+</p>
+<p>If this rule holds for two events, A and B, then A and B are independent.<br />
+</p>
+<p>Therefore, there are two ways to determine independence : </p>
+<ul>
+<li>Events A and B are independent if, and only if, P(A|B) = P(A)<br />
+</li>
+<li>Events A and B are independent if, and only if, <span class="math inline">\(P(A\cap B) = P(A) * P(B)\)</span><br />
+<br />
+</li>
+</ul>
+</div>
+<div id="marginal-probability-using-general-multiplication-rule" class="section level4">
+<h4>Marginal probability using General Multiplication Rule</h4>
+<p>        P(A) = P(A|<span class="math inline">\(B_1\)</span>) * P(<span class="math inline">\(B_1\)</span>) + P(A|<span class="math inline">\(B_2\)</span>) * P(<span class="math inline">\(B_2\)</span>) + ….. + P(A|<span class="math inline">\(B_k\)</span>) * P(<span class="math inline">\(B_k\)</span>)<br />
+<br />
+</p>
+</div>
+<div id="bayesian-theorem" class="section level4">
+<h4>Bayesian Theorem</h4>
+<p>        P(<span class="math inline">\(A_i\)</span>|B) = <span class="math inline">\(\large \frac{P(A_i)*P(B|A_i)}{\large \sum_{\large i=1}^{\large n} P(A_i)*P(B|A_i)} \ ,\normalsize i = 1,2,3,....,n\)</span></p>
 </div>
 
 
