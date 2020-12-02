@@ -1,0 +1,55 @@
+---
+title: "Examples of Discrete Probability Distributions"
+author: "Manideep Bangaru"
+date: "02/12/2020"
+output: html_document
+---
+
+## Binomial distribution examples
+**Q1.** If the likelihood of a tagged order form is 0.1, what is the probability that there are three tagged order forms in the sample of four?\
+**solution :**\
+```{r,echo=TRUE}
+k <- 3
+n <- 4
+p <- 0.1
+dbinom(k,n,p)
+```
+\
+
+**Q2.** If the likelihood of a tagged order form is 0.1, what is the probability that there are three or more (i.e., at least three) tagged order forms in the sample of four?\
+**Solution :**\
+
+$\normalsize \sf P(X\ge3) = P(X=3)+P(X=4)$
+```{r,echo=TRUE}
+# P(X=3)
+k = 3
+n = 4
+p = 0.1
+Prob1 <- dbinom(k,n,p)
+
+# P(X=4)
+k = 4
+n = 4
+p = 0.1
+Prob2 <- dbinom(k,n,p)
+
+Prob1 + Prob2
+```
+Therefore, there is 0.37% of chance.\
+\
+
+
+## Poisson distribution examples
+**Q1.** The number of work-related injuries per month in a manufacturing plant is known to follow a Poisson distribution, with a mean of 2.5 work-related injuries a month. 
+**Solution :**\
+```{r,echo=TRUE}
+# What is the probability that in a given month, no work-related injuries occur?
+mu <- 2.5
+x <- 0
+ppois(x,mu)
+
+# That at least one work-related injury occurs?
+# 1 - P(X=0)
+x <- 0
+1 - ppois(x,mu)
+```
