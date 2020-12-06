@@ -4,4 +4,6 @@ author: "Manideep Bangaru"
 date: "28/11/2020"
 output: html_document
 ---
+\
 
+Continuous probability distributions vary by the shape under the curve
