@@ -17,8 +17,9 @@ vec <- c(20,34,56,23,45,22,60,23,56,78,23,45)
 ```
 \
 $\Large \sf Mean \ of \ the \ vector$\
+The arithmetic mean (typically referred to as the mean) is the most common measure of central tendency.\
 
-$\frac{\Large\sum_{\Large i=1}^{\Large n}{\Large x_i}}{\Large n}$
+$\Large \frac {\sum_{\Large i=1}^{\Large n}{\Large x_i}}{\Large n}$
 ```{r,echo=TRUE}
 mean(vec)
 ```
