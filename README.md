@@ -7,3 +7,4 @@
  * Implementaion of my own statistical functions
  * Markdown Language
  * Latex Language
+ * Jupyter presentations
