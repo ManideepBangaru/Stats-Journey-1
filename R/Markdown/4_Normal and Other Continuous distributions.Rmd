@@ -14,3 +14,68 @@ The normal distribution is not only symmetrical, but bell-shaped, a shape that (
 ### Uniform Distribution
 It is also known as rectangular distribution, contains the values that are equally distributed in the range between the minimum value and the maximum value.
 In a uniform distribution every value has a equal chance of occurrence
+
+### Exponential Distribution
+The exponential distribution contains values from zero to positive infinity and is right-skewed, making the mean greater than the median
+
+### Properties of Normal Distribution
+* Symmetrical distribution. Its mean and median are therefore equal
+* Bell-shaped. Values cluster around the mean
+* Interquartile range is roughly 1.33 standard deviations. Therefore, the middle 50% of the values are contained within an interval that is approximately two-thirds of a standard deviation below and two-thirds of a standard deviation above the mean
+* The distribution has an infinite range $-\infty < X < \infty$
+* Six standard deviations approximate this range
+
+### Normal Probability Density Function
+$\large f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^-(\frac{1}{2})(\frac{x-\mu}{\sigma})^2$ \
+\
+where,\
+e = mathematical constant (2.71828) \
+$\pi$ = mathematical constant (3.14159) \
+$\mu$ = mean \
+$\sigma$ = standard deviation \
+X = Any value of the continuous variable, $-\infty < X < \infty$ \
+
+### Computing Normal Probabilities
+To compute Normal probabilites, you need to first convert **X** to a standardized normal variable **(Z)**, using <font color='red'> Transformation formula </font>
+
+### Z Transformation formula
+The Z value is equal to difference between X and the mean,$\mu$, divided by the standard deviation($\sigma$)
+
+$\text{Z =} \large \frac{x-\mu}{\sigma}$
+
+### Excercises
+1) What is the probability that the load time of a web sales page will be more than 9 seconds if average load time is 7 seconds with a standard deviation of 2?
+```{r, echo=TRUE}
+1-pnorm(9,7,2)
+```
+
+2) What is the probability that the load time for the web sales page will be less than 7 seconds or more than 9 seconds?
+```{r, echo=TRUE}
+pnorm(7,7,2) + (1-pnorm(9,7,2))
+```
+
+3) How much time (in seconds) will elapse before the fastest 10% of the web sales pages load time occur?
+```{r, echo=TRUE}
+qnorm(0.10,7,2)
+```
+_Thus, 10% of the load times are 4.44 seconds or less_
+
+### Evaluating Normality
+* Construct charts and observe their appearance. For small or moderate sized data sets, create a stem-and-leaf display or a boxplot. For large data sets, in addition, plot a histogram or polygon.
+
+* Compute descriptive statistics and compare these statistics with the theoretical proper- ties of the normal distribution. Compare the mean and median. Is the interquartile range approximately 1.33 times the standard deviation? Is the range approximately 6 times the standard deviation?
+
+* Evaluate how the values are distributed. Determine whether approximately two-thirds of the values lie between the mean and $\pm$ 1 standard deviation. Determine whether approximately four-fifths of the values lie between the mean and $\pm$ 1.28 standard deviations. Determine whether approximately 19 out of every 20 values lie between the mean and $\pm$ 2 standard deviations.
+
+### The Uniform Distribution
+In the uniform distribution, the values are evenly distributed in the range between the smallest value, **a**, and the largest value, **b**. 
+
+Because of its shape, the uniform distribution is sometimes called the **rectangular distribution**
+
+**_Uniform Probability Density Function_**
+
+$\large f(x) = \Large \frac{1}{b-a}, \normalsize \text{if a} \le \text{X} \le b \land \text{0 elsewhere}$
+
+where,\
+a = minimum value of X \
+b = maximum value of X
