@@ -9,3 +9,5 @@
  * Latex Language
  * Jupyter presentations
  * blog updates
+ * Correction of Concepts
+
