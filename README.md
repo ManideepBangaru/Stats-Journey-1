@@ -10,4 +10,3 @@
  * Jupyter presentations
  * blog updates
  * Correction of Concepts
-
